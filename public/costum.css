@@ -1,0 +1,32 @@
+.logo-img {
+    width: 200px; 
+    height: auto; 
+    margin-left: 50px;
+}
+#navbarNav {
+    width: 50%;
+}
+.nav-item {
+    margin-right: 20px;
+}
+.nav-item a {
+    color: #383E56;
+    font: bold 13px arial;
+}
+.background-image {
+    background-image: url('gambar/gedung.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Tinggi gambar mengisi seluruh viewport */
+    width: 100%; /* Lebar gambar mengisi seluruh viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff; /* Warna teks */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.container {
+    position: relative; /* Mengatur posisi konten relatif untuk overlay */
+    z-index: 1; /* Menetapkan indeks z agar konten muncul di atas latar belakang */
+}
