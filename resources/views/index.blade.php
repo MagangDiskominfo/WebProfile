@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Laravel App</title>
-    <link href="costum.css" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Tautkan file CSS Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Tautkan file CSS kustom -->
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    <!-- Tautkan file CSS menggunakan vite -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+
 </head>
 <body class="bg-gray-100">
     <!-- Bagian Nav Bar -->
@@ -30,8 +30,23 @@
                         <li class="nav-item">
                             <a class="px-3 py-2 flex text-xs uppercase leading-snug" href="{{ route('home') }}">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="px-3 py-2 flex text-xs uppercase leading-snug" href="{{ route('profile') }}">Profile</a>
+
+                        <li class="nav-item dropdown relative">
+                                <a class="px-3 py-2 flex text-xs uppercase leading-snug dropdown-toggle" href="#" role="button">
+                                    Dropdown link
+                                </a>
+                                <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+                                    <li class="">
+                                        <a class="dropdown-item block px-4 py-2 hover:bg-gray-200" href="#">Action</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="dropdown-item block px-4 py-2 hover:bg-gray-200" href="#">Another action</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="dropdown-item block px-4 py-2 hover:bg-gray-200" href="#">Something else here</a>
+                                    </li>
+                                </ul>
+                            {{-- <a class="px-3 py-2 flex text-xs uppercase leading-snug" href="{{ route('profile') }}">Profile</a> --}}
                         </li>
                         <li class="nav-item">
                             <a class="px-3 py-2 flex text-xs uppercase leading-snug" href="{{ route('profile') }}">Gallery</a>
